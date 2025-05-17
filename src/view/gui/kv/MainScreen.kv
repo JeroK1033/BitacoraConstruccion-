@@ -1,0 +1,18 @@
+<MainScreen>
+
+    Label:
+        text: "Bitacora de Construccion"
+    BoxLayout:
+        orientation: "vertical"
+        Button:
+            text: "Iniciar Sesion"
+            size_hint: 0.3, 0.2
+            on_press: root.abrir_pantalla_login()
+        Button:
+            text: "Registrarse"
+            size_hint: 0.3, 0.2
+            on_press: root.abrir_pantalla_registro()
+        Button:
+            text: "Salir"
+            size_hint: 0.3, 0.2
+            on_press: root.cerrar_aplicacion()

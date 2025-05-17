@@ -1,0 +1,19 @@
+<LoginScreen>
+    Label:
+        text:"Ingrese su email y contraseña
+    
+    BoxLayout:
+        orientation: 'vertical'
+        Button:
+            text: 'Iniciar sesión'
+            size_hint: 0.3, 0.2
+            on.press: root.verificar_supervisor()
+        
+        Button:
+            text: 'Olvide mi contraseña'
+            size_hint: 0.3, 0.2
+
+        Button:
+            text: "Volver"
+            size_hint: 0.3, 0.2
+            on.press : root.volver()
