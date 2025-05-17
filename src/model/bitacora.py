@@ -1,6 +1,6 @@
 from src.model.i_diccionario import IDiccionario
-from src.model.errores import Error
-from src.model.actividad import Actividad
+from src.model.errores import ErrorCamposVacios
+
 
 class Bitacora:
     """

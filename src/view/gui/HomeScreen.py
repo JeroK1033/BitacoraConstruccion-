@@ -7,7 +7,7 @@ Builder.load_file("src/view/gui/kv/HomeScreen.kv")
 class HomeScreen(Screen):
     def __init__(self, controlador: AppControlador, **kwargs):
         super().__init__(**kwargs)
-        self.controlador.AppControlador = controlador
+        self.controlador: AppControlador = controlador
     
     def volver(self):
         """

@@ -1,14 +1,15 @@
 from kivy.uix.screenmanager import Screen
 from kivy.lang import Builder
 from src.controller.app_controlador import AppControlador
-from model.diccionario_db import Consulta
+
 
 Builder.load_file("src/view/gui/kv/LoginScreen.kv")
 
 class LoginScreen(Screen):
     def __init__(self, controlador: AppControlador, **kwargs):
         super().__init__(**kwargs)
-        self.controlador.AppControlador = controlador
+        self.controlador: AppControlador = controlador
+           
     
     def volver(self):
         """
