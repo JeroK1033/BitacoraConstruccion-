@@ -41,11 +41,9 @@ class Consulta(IDiccionario):
         Returns:
             bool: True si el supervisor existe, False en caso contrario.
         """
-        supervisor = self.__obtener_usuarios(email, contraseña)
-        
-        for sup in supervisor:
-            if sup.email == email and sup.contraseña == contraseña:
-                return True
+        supervisor = self.database_session.query(SupervisorDB).filter_by(email=email, contraseña=contraseña).first()
+        if supervisor:
+            return True
         return False
     
     
