@@ -16,14 +16,14 @@ class Bitacora:
         Verifica si el supervisor existe e incia sesion.
         
         """
-        return self.__diccionario.__verificar_usuario(email, contraseña)
+        return self.__diccionario.verificar_usuario(email, contraseña)
 
     def registrar_usuario_nuevo(self, email: str, contraseña: str) -> bool:
         """
         Registra un nuevo usuario en la bitacora.
         
         """
-        return self.__diccionario.__registrar_usuario(email, contraseña)
+        return self.__diccionario.registrar_usuario(email, contraseña)
 
     
 

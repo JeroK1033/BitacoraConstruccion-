@@ -14,7 +14,7 @@ class DiccionarioFile(IDiccionario):
         """
         self.usuarios: list[str] = self.cargar_usuarios()
     
-    def __obtener_supervisores(self) -> list[str]:
+    def obtener_supervisores(self) -> list[str]:
         """
             Carga los supervisores desde el archivo ("assets/usuarios.txt")
             
@@ -28,7 +28,7 @@ class DiccionarioFile(IDiccionario):
                 usuarios.append(line.strip().split(","))
         return usuarios
     
-    def __verificar_supervisor(self, email: str, contraseña: str) -> bool:
+    def verificar_supervisor(self, email: str, contraseña: str) -> bool:
         """
         Verifica si un supervisor existe en el archivo de texto.
 
@@ -45,7 +45,7 @@ class DiccionarioFile(IDiccionario):
         return False
 
     
-    def __registrar_supervisor(self, nombre: str, email: str, contraseña: str) -> bool:
+    def registrar_supervisor(self, nombre: str, email: str, contraseña: str) -> bool:
         """
         Registra un nuevo supervisor en el archivo de texto, pero primero verifica si el usuario ya existe.
 

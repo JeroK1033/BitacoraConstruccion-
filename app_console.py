@@ -3,4 +3,4 @@ from src.controller.app_controlador import AppControlador
 
 if __name__ == '__main__':
     app_controlador: AppControlador = AppControlador()
-    Menu(app_controlador).iniciar()
+    Menu(app_controlador).menu_principal()

@@ -30,7 +30,7 @@ class Consulta(IDiccionario):
         return supervisor
     
     
-    def __verificar_supervisor(self, email: str, contraseña: str) -> bool:
+    def verificar_supervisor(self, email: str, contraseña: str) -> bool:
         """
         Verifica si el supervisor existe en la base de datos.
         
@@ -49,7 +49,7 @@ class Consulta(IDiccionario):
         return False
     
     
-    def __registrar_supervisor(self, nombre: str, email: str, contraseña: str) -> bool:
+    def registrar_supervisor(self, nombre: str, email: str, contraseña: str) -> bool:
 
         """
         Registra un nuevo supervisor en la base de datos, pero primero verifica si el supervisor ya existe.
