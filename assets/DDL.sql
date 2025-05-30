@@ -50,3 +50,6 @@ insert into anexos (id_actividad, ruta_archivo, tipo_archivo) values
 (2, "/ruta/al/archivo2.pdf", "documento"),
 (3, "/ruta/al/archivo3.mp4", "video"),
 (4, "/ruta/al/archivo4.docx", "documento")
+
+
+
