@@ -4,12 +4,7 @@ from src.model.bitacora import Bitacora
 from src.model.diccionario_file import DiccionarioFile
 
 
-class LetraInput(BaseModel):
-    letra: str
 
-
-class DificultadInput(BaseModel):
-    dificultad: str
 
 
 class WebControlador:
