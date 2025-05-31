@@ -10,6 +10,13 @@ class LoginScreen(Screen):
         super().__init__(**kwargs)
         self.controlador: AppControlador = controlador
            
+    def iniciar_sesion(self):
+        if self.controlador.iniciar_sesion(self.ids.email_input.text, self.ids.password_input.text):
+            self.manager.current = "HomeScreen"
+        else:
+            self.ids.error_label.text = "Credenciales incorrectas. Inténtalo de nuevo."
+
+    
     
     def volver(self):
         """

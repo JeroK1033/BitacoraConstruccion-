@@ -1,0 +1,53 @@
+<HomeScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        padding: dp(20)
+        spacing: dp(20)
+
+        AnchorLayout:
+            size_hint_y: None
+            height: dp(100)
+            anchor_x: 'center'
+            anchor_y: 'center'
+
+            Label:
+                text: "Bienvenido a la Bitacora de Construccion"
+                font_size: '20sp'
+                bold: True
+
+        GridLayout:
+            cols: 1
+            size_hint_y: None
+            height: self.minimum_height
+            spacing: dp(10)
+
+            Button:
+                text: "Registrar Actividad"
+                size_hint_y: None
+                height: dp(40)
+                on_press: app.root.current = "ActivityScreen"
+
+            Button:
+                text: "Consultar Actividad"
+                size_hint_y: None
+                height: dp(40)
+                on_press: app.root.current = "ListScreen"
+
+            Button:
+                text: "Reporte"
+                size_hint_y: None
+                height: dp(40)
+                on_press: app.root.current = "ReportScreen"
+
+            Button:
+                text: "Actualizar Contraseña"
+                size_hint_y: None
+                height: dp(40)
+                on_press: app.root.current = "UpdateScreen"
+
+            Button:
+                text: "Cerrar Sesion"
+                size_hint_y: None
+                height: dp(40)
+                on_press: app.root.current = "LoginScreen"
+

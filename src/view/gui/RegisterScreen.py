@@ -1,7 +1,6 @@
 from kivy.uix.screenmanager import Screen
 from kivy.lang import Builder
 from src.controller.app_controlador import AppControlador
-from src.model.i_diccionario import IDiccionario
 
 Builder.load_file("src/view/gui/kv/RegisterScreen.kv")
 
@@ -11,18 +10,19 @@ class RegisterScreen(Screen):
         self.controlador: AppControlador = controlador
     
     def registrar_supervisor(self):
-        email = self.ids.email.text
-        contraseña = self.ids.contraseña.text
-        if not email or not contraseña:
+        nombre = self.ids.name_input.text
+        email = self.ids.email_input.text
+        contraseña = self.ids.password_input.text
+        
+        if not nombre or not email or not contraseña:
             self.ids.error.text = "Por favor, complete todos los campos."
             return
-        if self.controlador.registrar_usuario(email, contraseña) is True:
+        
+        if self.controlador.registrar_usuario(nombre, email, contraseña):
             self.ids.error.text = "Usuario registrado con éxito."
             self.manager.current = "LoginScreen"
         else:
             self.ids.error.text = "Supervisor ya registrado. Intente nuevamente."
-
-
 
     def volver(self):
         """

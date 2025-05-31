@@ -1,32 +1,33 @@
 from src.model.i_diccionario import IDiccionario
 
 class DiccionarioFile(IDiccionario):
-    """
-        Clase que representa un diccionario de supervisores.
-        
-        Atributtes:
-            usuarios (list[str]): Lista de supervisores cargados desde un archivo de texto.
-    """
-
     def __init__(self):
-        """
-            Inicializa una instancia de la clase DiccionarioFile, cargando los usuarios desde un archivo de texto.
-        """
-        self.supervisores: list[str] = self.___obtener_supervisores()
-    
-    def ___obtener_supervisores(self) -> list[str]:
-        """
-            Carga los supervisores desde el archivo ("assets/usuarios.txt")
-            
-            retuns:
-                list[str]: Lista de usuarios cargadas desde el archivo.
-        """
+        self.supervisores = self._obtener_supervisores()
+
+    def _obtener_supervisores(self):
         supervisores = []
-        
         with open("assets/usuarios.txt", "r") as file:
             for line in file:
                 supervisores.append(line.strip().split(","))
         return supervisores
+
+    def verificar_supervisor(self, email: str, contraseña: str) -> bool:
+        for usuario in self.supervisores:
+            if len(usuario) >= 3 and usuario[1] == email and usuario[2] == contraseña:
+                return True
+        return False
+
+    def registrar_supervisor(self, nombre: str, email: str, contraseña: str) -> bool:
+        for usuario in self.supervisores:
+            if usuario[1] == email:
+                return False  
+        self.supervisores.append([nombre, email, contraseña])
+        
+        with open("assets/usuarios.txt", "a") as file:
+            file.write(f"{nombre},{email},{contraseña}\n")
+
+        return True
+
     
     
 

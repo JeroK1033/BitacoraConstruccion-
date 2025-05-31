@@ -1,16 +1,51 @@
-<LoginScreen>
-    Label:
-        text:"Ingrese su email y contraseña"
-    
+<LoginScreen>:
+    AnchorLayout:
+        anchor_x: 'center'
+        anchor_y: 'center'
+
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint: None, None
+            size: self.minimum_size
+            spacing: dp(10)
+
+            Label:
+                text: "Ingrese su email y contraseña"
+                size_hint_y: None
+                height: self.texture_size[1]
+
+            TextInput:
+                id: email_input
+                hint_text: "Correo electrónico"
+                multiline: False
+                size_hint_y: None
+                height: '40dp'
+                width: dp(300)
+                size_hint_x: None
+
+            TextInput:
+                id: password_input
+                hint_text: "Contraseña"
+                password: True
+                multiline: False
+                size_hint_y: None
+                height: '40dp'
+                width: dp(300)
+                size_hint_x: None
+
+            Label:
+                id: error_label
+                text: ""
+                color: 1, 0, 0, 1   # rojo para el texto de error
+                size_hint_y: None
+                height: self.texture_size[1]
+
     BoxLayout:
         orientation: 'horizontal'
         Button:
             text: 'Iniciar sesión'
             size_hint: 0.3, 0.2
-        
-        Button:
-            text: 'Olvide mi contraseña'
-            size_hint: 0.3, 0.2
+            on_press: root.iniciar_sesion()
 
         Button:
             text: "Volver"
