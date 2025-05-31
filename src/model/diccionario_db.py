@@ -18,7 +18,7 @@ class Consulta(IDiccionario):
         self.database_session = session()
     
     
-    def __obtener_supervisores(self, email: str, contraseña: str):
+    def __obtener_supervisores(self):
         """
         Obtiene los supervisores que hay registrados en la base de datos 
         
@@ -34,7 +34,7 @@ class Consulta(IDiccionario):
         """
         Verifica si el supervisor existe en la base de datos.
         
-        Args:
+        Atributes:
             email (str): El correo electrónico del supervisor.
             contraseña (str): La contraseña del supervisor.
         

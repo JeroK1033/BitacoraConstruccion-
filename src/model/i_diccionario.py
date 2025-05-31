@@ -1,9 +1,6 @@
 from abc import ABC
 
 class IDiccionario(ABC):
-    def obtener_usuarios(self, email: str, contraseña: str):
+    def obtener_supervisores(self) -> list:
         pass
-    def verificar_usuario(self, email: str, contraseña: str) -> bool:
-        pass
-    def registrar_usuario(self, nombre: str, email: str, contraseña: str) -> bool:
-        pass
+    

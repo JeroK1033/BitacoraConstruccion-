@@ -10,20 +10,45 @@ class Bitacora:
 
     def __init__(self, diccionario: IDiccionario):
         self.__diccionario: IDiccionario = diccionario
+        self.supervisores = self.__cargar_supervisores()
     
-    def inciar_sesion(self, email: str, contraseña: str) -> bool:
+    def verificar_supervisor(self, email: str, contraseña: str) -> bool:
         """
-        Verifica si el supervisor existe e incia sesion.
-        
-        """
-        return self.__diccionario.verificar_usuario(email, contraseña)
+        Verifica si un supervisor existe en el archivo de texto.
 
-    def registrar_usuario_nuevo(self, email: str, contraseña: str) -> bool:
+        Args:
+            email (str): El correo electrónico del usuario.
+            contraseña (str): La contraseña del usuario.
+
+        Returns:
+            bool: True si el usuario existe, False en caso contrario.
         """
-        Registra un nuevo usuario en la bitacora.
-        
+        for usuario in self.supervisores:
+            if usuario[1] == email and usuario[2] == contraseña:
+                return True
+        return False
+
+    def registrar_supervisor(self, nombre: str, email: str, contraseña: str) -> bool:
         """
-        return self.__diccionario.registrar_usuario(email, contraseña)
+        Registra un nuevo supervisor en el archivo de texto.
+        Atributes:
+            nombre (str): _description_
+            email (str): _description_
+            contrase (_type_): _description_
+
+        Returns:
+            bool: true si el supervisor fue registrado correctamente, false si ya existe.
+        """
+        for usuario in self.supervisores:
+            if usuario[1] == email:
+                return False 
+            
+        self.supervisores.append([nombre, email, contraseña])
+
+        with open("assets/usuarios.txt", "a") as file:
+            file.write(f"{nombre},{email},{contraseña}\n")
+
+        return True
 
     
 

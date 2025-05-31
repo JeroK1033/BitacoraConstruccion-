@@ -3,7 +3,11 @@ from pydantic import BaseModel
 from src.model.bitacora import Bitacora
 from src.model.diccionario_file import DiccionarioFile
 
+class CorreoInput(BaseModel):
+    correo: str
 
+class ContrasenaInput(BaseModel):
+    contrasena: str
 
 
 
@@ -16,8 +20,8 @@ class WebControlador:
     def __registrar_rutas(self):
         @self.router.post("/usuarios")
         def registrar_usuario():
-            return{"Usuario registrado exitosamente": self.bitacora.registrar_usuario_nuevo()}
+            return{"Usuario registrado exitosamente": self.bitacora.registrar_supervisor()}
         
         self.router.post("/IniciarSesion")
         def iniciar_sesion():
-            return {"Iniciar sesion": self.bitacora.inciar_sesion()}
+            return {"Iniciar sesion": self.bitacora.verificar_supervisor()}

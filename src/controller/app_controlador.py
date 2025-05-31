@@ -8,7 +8,7 @@ class AppControlador:
         #self.bitacora = Bitacora(Consulta)
     
     def iniciar_sesion(self, email, contraseña):
-        return self.bitacora.inciar_sesion()
+        return self.bitacora.verificar_supervisor(email, contraseña)
 
-    def registrar_usuario(self, email, contraseña):
-        return self.bitacora.registrar_usuario_nuevo(email, contraseña)  
+    def registrar_usuario(self, nombre, email, contraseña):
+        return self.bitacora.registrar_supervisor(nombre, email, contraseña)  
