@@ -1,0 +1,30 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Bitacora de Construccion</title>
+    <link rel="stylesheet" href="activity.css"></link>
+
+</head>
+<body>
+
+<div class="contenido-central">
+    <div>
+        <div class="mensaje">Rellene los campos</div>
+        <form id="registroForm" enctype="multipart/form-data">
+            <input type="datetime-local" id="fecha_hora" placeholder="Fecha y Hora" required><br><br>
+            <input type="text" id="descripcion"  placeholder="Descripción" required><br><br>
+            <input type="text" id="clima"  placeholder="Condiciones Climáticas" required><br><br>
+            <input type="file" id="anexo"  required><br><br>
+            <input type="text" id="supervisor" placeholder="Supervisor" required><br><br>
+        </form>
+    </div>
+</div>
+
+<div class="botones">
+    <button onclick="registrar_actividad()">Subir Actividad</button>
+    <button onclick="window.location.href='home.html'">Volver</button>
+
+</div>
+
+</body>
+</html>

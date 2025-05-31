@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.contenido-central {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mensaje {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input,
+input[type="datetime-local"],
+input[type="file"] {
+    font-size: 16px;
+    padding: 10px;
+    width: 300px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    background-color: #222;
+    color: white;
+}
+
+input[type="file"] {
+    padding: 5px;
+    background-color: #333;
+}
+
+.botones {
+    display: flex;
+}
+
+.botones button {
+    flex: 1;
+    font-size: 18px;
+    background-color: #444;
+    color: white;
+    border: 1px solid black;
+    cursor: pointer;
+    height: 150px;
+}
+

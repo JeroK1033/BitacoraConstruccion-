@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Cambiar Contraseña</title>
+    <link rel="stylesheet" href="update.css" />
+</head>
+<body>
+
+<div class="contenido-central">
+    <div>
+        <div class="mensaje">Cambiar Contraseña</div>
+        <form id="cambioContrasenaForm">
+            <input type="password" id="contrasenaAnterior" placeholder="Contraseña anterior" />
+            <input type="password" id="nuevaContrasena" placeholder="Nueva contraseña" />
+            <input type="password" id="confirmarContrasena" placeholder="Confirmar nueva contraseña" />
+            <textarea readonly style="margin-top: 15px; width: 300px; background-color: #333; color: white; border: none; padding: 10px; border-radius: 5px;">
+La contraseña debe tener mínimo 8 caracteres, incluyendo mayúsculas, minúsculas y números.
+            </textarea>
+        </form>
+    </div>
+</div>
+
+<div class="botones">
+    <button type="button" onclick="alert('Contraseña cambiada correctamente')">Cambiar Contraseña</button>
+    <button type="button" onclick="window.location.href='home.html'">Volver</button>
+</div>
+
+</body>
+</html>
+

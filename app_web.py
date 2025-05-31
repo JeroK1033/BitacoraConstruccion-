@@ -18,4 +18,4 @@ if __name__ == "__main__":
 
     app.include_router(web_controlador.router)
     app.mount("/", StaticFiles(directory="src/view/web", html=True), name="static")
-    uvicorn.run(app=app, host="192.168.1.52", port=8000)
+    uvicorn.run(app=app, host="192.168.56.1", port=8000)

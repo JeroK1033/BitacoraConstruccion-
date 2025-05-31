@@ -10,7 +10,6 @@ class Bitacora:
 
     def __init__(self, diccionario: IDiccionario):
         self.__diccionario: IDiccionario = diccionario
-        self.supervisores = self.__cargar_supervisores()
     
     def verificar_supervisor(self, email: str, contraseña: str) -> bool:
         """
