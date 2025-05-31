@@ -1,0 +1,73 @@
+<ActivityScreen>:
+    AnchorLayout:
+        anchor_x: 'center'
+        anchor_y: 'top'       # arriba
+        padding: dp(20), dp(20), dp(20), dp(20)  # margen alrededor
+
+        BoxLayout:
+            orientation: 'vertical'
+            spacing: dp(8)
+            size_hint: None, None
+            size: dp(320), dp(450)
+            
+            Label:
+                text: "Registrar Actividad"
+                font_size: '16sp'
+                size_hint_y: None
+                height: self.texture_size[1]
+
+            TextInput:
+                id: fecha_hora_input
+                hint_text: "Fecha y hora (YYYY-MM-DD HH:MM:SS)"
+                multiline: False
+                size_hint_y: None
+                height: dp(30)
+                width: dp(280)
+                size_hint_x: None
+
+            TextInput:
+                id: supervisor_input
+                hint_text: "Nombre o correo del supervisor"
+                multiline: False
+                size_hint_y: None
+                height: dp(30)
+
+            TextInput:
+                id: descripcion_input
+                hint_text: "Descripción"
+                multiline: True
+                size_hint_y: None
+                height: dp(60)
+
+            TextInput:
+                id: anexo_input
+                hint_text: "Anexo (ruta o texto)"
+                multiline: False
+                size_hint_y: None
+                height: dp(30)
+
+            TextInput:
+                id: condiciones_input
+                hint_text: "Condiciones climáticas"
+                multiline: False
+                size_hint_y: None
+                height: dp(30)
+
+            Label:
+                id: error_label
+                text: ""
+                color: 1, 0, 0, 1   # rojo para el texto de error
+                size_hint_y: None
+                height: self.texture_size[1]
+
+    BoxLayout:
+        orientation: 'horizontal'
+        Button:
+            text: 'Registrar'
+            size_hint: 0.3, 0.2
+            on_press: root.nueva_actividad()
+
+        Button:
+            text: "Volver"
+            size_hint: 0.3, 0.2
+            on_press : root.volver()

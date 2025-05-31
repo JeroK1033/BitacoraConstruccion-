@@ -30,3 +30,15 @@ class Consulta(IDiccionario):
         self.database_session.add(nuevo_supervisor)
         self.database_session.commit()
         return True
+
+    def registrar_actividad(self, fecha_hora, supervisor, descripcion, anexo, condiciones_climaticas) -> bool:
+        nuevo_actividad = ActividadDB(
+            fecha_hora=fecha_hora,
+            supervisor=supervisor,
+            descripcion=descripcion,
+            anexo=anexo,
+            condiciones_climaticas=condiciones_climaticas
+        )
+        self.database_session.add(nuevo_actividad)
+        self.database_session.commit()
+        return True

@@ -9,7 +9,31 @@ class HomeScreen(Screen):
         super().__init__(**kwargs)
         self.controlador: AppControlador = controlador
     
-    def volver(self):
+    def actividad(self):
+        """
+        Cambia a la pantalla de registro de actividad.
+        """
+        self.manager.current = "ActivityScreen"
+    
+    def consulta(self):
+        """
+        Cambia a la pantalla de consulta de actividades.
+        """
+        self.manager.current = "ListScreen"
+    
+    def reporte(self):
+        """
+        Cambia a la pantalla de reporte de actividades.
+        """
+        self.manager.current = "ReportScreen"
+    
+    def update(self):
+        """
+        Cambia a la pantalla de actualización de actividades.
+        """
+        self.manager.current = "UpdatePScreen"
+    
+    def CerrarSesion(self):
         """
         Cambia a la pantalla principal.
         """

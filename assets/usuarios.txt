@@ -1,4 +1,7 @@
 jero@gmail.com, 1234
 joaquin@gmail.com, 5678
 samuel@hotmail.com, 91011
-lucas@yahoo.com, 1213
+lucas@yahoo.com, 1213Jeronimo Henao,jero@gmail.com,1234
+Juan Perez, juan.perez@example.com, JuanP@123jeronimo,jero@gmail.com,10333180968
+jeronimo,jero2@gmail.com,1033180968
+jeronimo,jero@gmail.com,1033180968

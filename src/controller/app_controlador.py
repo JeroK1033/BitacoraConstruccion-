@@ -12,3 +12,6 @@ class AppControlador:
 
     def registrar_usuario(self, nombre, email, contraseña):
         return self.bitacora.registrar_supervisor(nombre, email, contraseña)
+    
+    def registrar_actividad(self, fecha_hora, supervisor, descripcion, anexo, condiciones_climaticas):
+        return self.bitacora.registrar_actividad(fecha_hora, supervisor, descripcion, anexo, condiciones_climaticas)

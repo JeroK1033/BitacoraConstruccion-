@@ -25,29 +25,29 @@
                 text: "Registrar Actividad"
                 size_hint_y: None
                 height: dp(40)
-                on_press: app.root.current = "ActivityScreen"
+                on_press: root.actividad()
 
             Button:
                 text: "Consultar Actividad"
                 size_hint_y: None
                 height: dp(40)
-                on_press: app.root.current = "ListScreen"
+                on_press: root.consulta()
 
             Button:
                 text: "Reporte"
                 size_hint_y: None
                 height: dp(40)
-                on_press: app.root.current = "ReportScreen"
+                on_press: root.reporte()
 
             Button:
                 text: "Actualizar Contraseña"
                 size_hint_y: None
                 height: dp(40)
-                on_press: app.root.current = "UpdateScreen"
+                on_press: root.update()
 
             Button:
                 text: "Cerrar Sesion"
                 size_hint_y: None
                 height: dp(40)
-                on_press: app.root.current = "LoginScreen"
+                on_press: root.CerrarSesion()
 
